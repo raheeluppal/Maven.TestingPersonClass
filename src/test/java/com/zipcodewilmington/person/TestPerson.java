@@ -1,5 +1,6 @@
 package com.zipcodewilmington.person;
 
+import com.sun.xml.internal.ws.model.AbstractSEIModelImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -95,4 +96,77 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void setHeight() {
+        Person newPerson = new Person();
+        Double expected = 5.4;
+
+        //When
+        newPerson.setHeight(expected);
+
+        //Then
+
+        Double actual = newPerson.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setWeight() {
+        Person newPerson = new Person();
+        Double expected = 150.4;
+
+        //When
+        newPerson.setWeight(expected);
+
+        //Then
+
+        Double actual = newPerson.getWeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setHairColor() {
+        // Given
+        Person person = new Person();
+        String expected = "Black";
+
+        // When
+        person.setHairColor(expected);
+        String actual = person.getHairColor();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setGender() {
+        // Given
+        Person person = new Person();
+        char expected = 'M';
+
+        // When
+        person.setGender(expected);
+        char actual = person.getGender();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setEyeColor() {
+        // Given
+        Person person = new Person();
+        String expected = "Blue";
+
+        // When
+        person.setEyeColor(expected);
+        String actual = person.getEyeColor();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
 }
+
+
